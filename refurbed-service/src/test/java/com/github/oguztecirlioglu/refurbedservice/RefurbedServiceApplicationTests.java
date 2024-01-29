@@ -9,5 +9,4 @@ class RefurbedServiceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
