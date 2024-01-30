@@ -1,7 +1,7 @@
 package com.github.oguztecirlioglu.refurbedservice.repository;
 
 import com.github.oguztecirlioglu.refurbedservice.domain.Computer;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-interface ComputerRepository extends CrudRepository<Computer, Long> {
+public interface ComputerRepository extends JpaRepository<Computer, Long> {
 }

@@ -13,24 +13,24 @@ public class FunellController {
                                       -> fetch and pick condition (good, bad, mid)
      */
 
-    @GetMapping
-    List<String> model(String deviceType) {
-        List<String> models = new ArrayList<>();
-
-        return models;
-    }
-
-    @GetMapping
-    List<String> storageCapacity(String model) {
-        List<String> storageCapacity = new ArrayList<>();
-
-        return storageCapacity;
-    }
-
-    @GetMapping
-    List<String> condition(String storageCapacity) {
-        List<String> condition = new ArrayList<>();
-
-        return condition;
-    }
+//    @GetMapping
+//    List<String> model(String deviceType) {
+//        List<String> models = new ArrayList<>();
+//
+//        return models;
+//    }
+//
+//    @GetMapping
+//    List<String> storageCapacity(String model) {
+//        List<String> storageCapacity = new ArrayList<>();
+//
+//        return storageCapacity;
+//    }
+//
+//    @GetMapping
+//    List<String> condition(String storageCapacity) {
+//        List<String> condition = new ArrayList<>();
+//
+//        return condition;
+//    }
 }
