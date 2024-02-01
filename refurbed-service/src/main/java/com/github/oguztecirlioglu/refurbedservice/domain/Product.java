@@ -7,6 +7,8 @@ import lombok.Setter;
 import java.net.URL;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@DiscriminatorColumn(name="product_type")
 public abstract class Product {
 
     @Id

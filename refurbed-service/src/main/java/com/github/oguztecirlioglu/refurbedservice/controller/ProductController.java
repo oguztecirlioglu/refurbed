@@ -5,14 +5,12 @@ import com.github.oguztecirlioglu.refurbedservice.domain.Phone;
 import com.github.oguztecirlioglu.refurbedservice.service.ComputerService;
 import com.github.oguztecirlioglu.refurbedservice.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
 @RestController
+@RequestMapping("/product")
 public class ProductController {
     // Get Most Recently Posted N products
     // Get product by id
@@ -23,22 +21,22 @@ public class ProductController {
     @Autowired
     ComputerService computerService;
 
-    @GetMapping("/product/allPhones")
+    @GetMapping("/allPhones")
     Collection<Phone> allPhones() {
         return phoneService.getAllPhones();
     }
 
-    @GetMapping("/product/allComputers")
+    @GetMapping("/allComputers")
     Collection<Computer> allComputers() {
         return computerService.getAllComputers();
     }
 
-    @PostMapping("/product/phone")
+    @PostMapping("/phone")
     Phone addNewPhone(@RequestBody Phone phone) {
         return phoneService.addNewPhone(phone);
     }
 
-    @PostMapping("/product/computer")
+    @PostMapping("computer")
     Computer addNewComputer(@RequestBody Computer computer) {
         return computerService.addNewComputer(computer);
     }
