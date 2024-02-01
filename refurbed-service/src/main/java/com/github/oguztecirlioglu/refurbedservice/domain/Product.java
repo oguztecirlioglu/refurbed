@@ -17,7 +17,8 @@ public abstract class Product {
 
     @Getter
     @Setter
-    private String year;
+    @Column(name = "manufacture_year")
+    private String manufactureYear;
 
     @Getter
     @Setter
