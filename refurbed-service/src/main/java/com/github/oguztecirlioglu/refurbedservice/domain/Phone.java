@@ -4,23 +4,26 @@ import com.github.oguztecirlioglu.refurbedservice.domain.enums.phoneEnums.PhoneM
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
+@NonNull
 @AllArgsConstructor
 public class Phone extends Product {
 
     @Setter
     @Getter
+    @NonNull
     private PhoneManufacturer phoneManufacturer;
 
     @Setter
     @Getter
+    @NonNull
     private Short memory;
 
     @Setter
     @Getter
+    @NonNull
     private String color;
 }
