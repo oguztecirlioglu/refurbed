@@ -2,12 +2,14 @@ package com.github.oguztecirlioglu.refurbedservice.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.net.URL;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@NoArgsConstructor
 public abstract class Product {
 
     @Id
@@ -38,4 +40,11 @@ public abstract class Product {
     @Column(name = "thumbnail_url")
     private URL thumbnailURL;
 
+    public Product(String manufactureYear, Float price, String name, String description, URL thumbnailURL) {
+        this.manufactureYear = manufactureYear;
+        this.price = price;
+        this.name = name;
+        this.description = description;
+        this.thumbnailURL = thumbnailURL;
+    }
 }

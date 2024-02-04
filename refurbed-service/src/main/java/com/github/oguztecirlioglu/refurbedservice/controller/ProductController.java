@@ -5,6 +5,7 @@ import com.github.oguztecirlioglu.refurbedservice.domain.Phone;
 import com.github.oguztecirlioglu.refurbedservice.domain.Product;
 import com.github.oguztecirlioglu.refurbedservice.service.ComputerService;
 import com.github.oguztecirlioglu.refurbedservice.service.PhoneService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,12 +40,12 @@ public class ProductController {
     }
 
     @PostMapping("/phone")
-    Phone addNewPhone(@RequestBody Phone phone) {
+    Phone addNewPhone(@Valid @RequestBody Phone phone) {
         return phoneService.addNewPhone(phone);
     }
 
     @PostMapping("/computer")
-    Computer addNewComputer(@RequestBody Computer computer) {
+    Computer addNewComputer(@Valid @RequestBody Computer computer) {
         return computerService.addNewComputer(computer);
     }
 }
