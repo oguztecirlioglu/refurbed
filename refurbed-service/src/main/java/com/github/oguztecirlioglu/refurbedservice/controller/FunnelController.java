@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/funnelService")
-public class FunellController {
+public class FunnelController {
     /* Device type: Phone vs Computer -> fetch and pick a model (iphone 12, macbook air, etc.)
                                       -> fetch and pick storage capacity
                                       -> fetch and pick condition (good, bad, mid)

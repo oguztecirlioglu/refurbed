@@ -1,4 +1,4 @@
-package com.github.oguztecirlioglu.refurbedservice.unitTests;
+package com.github.oguztecirlioglu.refurbedservice.integrationTests;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class ProductControllerTests {
 
     @Autowired
-    MockMvc mockMvc;
+    private MockMvc mockMvc;
 
     @Autowired
     private ObjectMapper objectMapper;
