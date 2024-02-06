@@ -1,6 +1,7 @@
 package com.github.oguztecirlioglu.refurbedservice.controller;
 
 import com.github.oguztecirlioglu.refurbedservice.domain.Product;
+import com.github.oguztecirlioglu.refurbedservice.domain.dto.ProductTypeDTO;
 import com.github.oguztecirlioglu.refurbedservice.domain.enums.ProductType;
 import com.github.oguztecirlioglu.refurbedservice.service.FunnelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,8 @@ public class FunnelController {
     }
 
     @PostMapping("/model")
-    List<Product> models(@RequestBody ProductType productType) {
+    List<Product> models(@RequestBody ProductTypeDTO productTypeDTO) {
+        ProductType productType = productTypeDTO.getType();
         return switch (productType) {
             case COMPUTER -> funnelService.getComputers();
             case PHONE -> funnelService.getPhones();
