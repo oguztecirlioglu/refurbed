@@ -63,13 +63,11 @@ public class FunnelControllerTests {
 
         List<Product> mockComputers = Arrays.asList(
                 new Computer("2020", 1110F,
-                        "MacBook", "macbook Desc",
-                        myURL, ComputerManufacturer.APPLE,
+                        "MacBook", ComputerManufacturer.APPLE,
                         (short) 1024, 15.9F),
 
                 new Computer("2022", 1110F,
-                        "Notebook", "Microsoft Desc",
-                        myURL, ComputerManufacturer.MICROSOFT,
+                        "Notebook", ComputerManufacturer.MICROSOFT,
                         (short) 2048, 15.9F)
         );
 

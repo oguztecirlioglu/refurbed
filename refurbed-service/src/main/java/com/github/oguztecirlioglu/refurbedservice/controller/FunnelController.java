@@ -1,13 +1,16 @@
 package com.github.oguztecirlioglu.refurbedservice.controller;
 
 import com.github.oguztecirlioglu.refurbedservice.domain.Product;
+import com.github.oguztecirlioglu.refurbedservice.domain.Quotation;
+import com.github.oguztecirlioglu.refurbedservice.domain.dto.ComputerDetailsDTO;
+import com.github.oguztecirlioglu.refurbedservice.domain.dto.PhoneDetailsDTO;
 import com.github.oguztecirlioglu.refurbedservice.domain.dto.ProductTypeDTO;
 import com.github.oguztecirlioglu.refurbedservice.domain.enums.ProductType;
 import com.github.oguztecirlioglu.refurbedservice.service.FunnelService;
+import com.github.oguztecirlioglu.refurbedservice.service.QuotationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -21,6 +24,9 @@ public class FunnelController {
 
     @Autowired
     FunnelService funnelService;
+
+    @Autowired
+    QuotationService quotationService;
 
     @GetMapping("/productType")
     List<ProductType> getProductTypes() {
@@ -36,17 +42,14 @@ public class FunnelController {
         };
     }
 
-    @GetMapping("/storageCapacity")
-    List<String> storageCapacity(String model) {
-        List<String> storageCapacity = new ArrayList<>();
-
-        return storageCapacity;
+    @PostMapping("/quotePrice/phone")
+    Quotation quotePrice(@RequestBody PhoneDetailsDTO phoneDetailsDTO) throws Exception {
+        return quotationService.generateQuote(phoneDetailsDTO);
     }
 
-    @GetMapping("/condition")
-    List<String> condition(String storageCapacity) {
-        List<String> condition = new ArrayList<>();
-
-        return condition;
+    @PostMapping("/quotePrice/computer")
+    Quotation quotePrice(@RequestBody ComputerDetailsDTO computerDetailsDTO) throws Exception {
+        return quotationService.generateQuote(computerDetailsDTO);
     }
+
 }

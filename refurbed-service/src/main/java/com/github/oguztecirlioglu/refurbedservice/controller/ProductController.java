@@ -39,6 +39,9 @@ public class ProductController {
         return computerService.getAllComputers();
     }
 
+    // These are private methods - NO client request should ever hit these.
+    // A limited set Phones and Computers will be used to generate Quotes, in a many-to-one relationship.
+    // Add admin role to execute these methods in the future.
     @PostMapping("/phone")
     Phone addNewPhone(@Valid @RequestBody Phone phone) {
         return phoneService.addNewPhone(phone);

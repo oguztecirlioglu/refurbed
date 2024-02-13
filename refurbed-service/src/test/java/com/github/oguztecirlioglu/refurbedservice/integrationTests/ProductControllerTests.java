@@ -79,7 +79,7 @@ public class ProductControllerTests {
         Short memory = 256;
         String color = "blue";
 
-        Phone samplePhone = new Phone(manufactureYear, price, name, description, url, phoneManufacturer, memory, color);
+        Phone samplePhone = new Phone(manufactureYear, price, name, phoneManufacturer, memory, color);
         String requestBodyJson = objectMapper.writeValueAsString(samplePhone);
 
         mockMvc.perform(post("/product/phone")
@@ -104,7 +104,7 @@ public class ProductControllerTests {
         Short storage = 1024;
         Float screenSize = 15.8F;
 
-        Computer sampleComputer = new Computer(manufactureYear, price, name, description, url, computerManufacturer, storage, screenSize);
+        Computer sampleComputer = new Computer(manufactureYear, price, name, computerManufacturer, storage, screenSize);
         String requestBodyJson = objectMapper.writeValueAsString(sampleComputer);
 
         mockMvc.perform(post("/product/computer")

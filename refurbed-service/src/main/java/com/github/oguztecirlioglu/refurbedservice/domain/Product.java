@@ -33,18 +33,12 @@ public abstract class Product {
 
     @Getter
     @Setter
-    private String description;
+    @ManyToOne
+    private ProductMetaData productMetaData;
 
-    @Getter
-    @Setter
-    @Column(name = "thumbnail_url")
-    private URL thumbnailURL;
-
-    public Product(String manufactureYear, Float price, String name, String description, URL thumbnailURL) {
+    public Product(String manufactureYear, Float price, String name) {
         this.manufactureYear = manufactureYear;
         this.price = price;
         this.name = name;
-        this.description = description;
-        this.thumbnailURL = thumbnailURL;
     }
 }

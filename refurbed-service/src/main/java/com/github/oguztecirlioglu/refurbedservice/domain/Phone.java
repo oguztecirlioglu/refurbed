@@ -12,7 +12,6 @@ import java.net.URL;
 @Entity
 @NoArgsConstructor
 public class Phone extends Product {
-
     @Setter
     @Getter
     @NotNull
@@ -28,8 +27,8 @@ public class Phone extends Product {
     @NotNull
     private String color;
 
-    public Phone(String manufactureYear, Float price, String name, String description, URL thumbnailURL, PhoneManufacturer phoneManufacturer, Short memory, String color) {
-        super(manufactureYear, price, name, description, thumbnailURL);
+    public Phone(String manufactureYear, Float price, String name, PhoneManufacturer phoneManufacturer, Short memory, String color) {
+        super(manufactureYear, price, name);
         this.phoneManufacturer = phoneManufacturer;
         this.memory = memory;
         this.color = color;

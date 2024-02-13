@@ -28,10 +28,19 @@ import java.net.URL;
     @NotNull
     private Float screenSize;
 
-   public Computer(String manufactureYear, Float price, String name, String description, URL thumbnailURL, ComputerManufacturer computerManufacturer, Short storage, Float screenSize) {
-      super(manufactureYear, price, name, description, thumbnailURL);
+   public Computer(String manufactureYear, Float price, String name, ComputerManufacturer computerManufacturer, Short storage, Float screenSize) {
+      super(manufactureYear, price, name);
       this.computerManufacturer = computerManufacturer;
       this.storage = storage;
       this.screenSize = screenSize;
+   }
+
+   public Computer(ComputerManufacturer computerManufacturer,
+                   Float screenSize, Short storage,
+                   String manufactureYear) {
+               this.computerManufacturer = computerManufacturer;
+               this.screenSize = screenSize;
+               this.storage = storage;
+               this.setManufactureYear(manufactureYear);
    }
 }
