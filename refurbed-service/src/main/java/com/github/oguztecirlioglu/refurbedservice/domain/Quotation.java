@@ -30,7 +30,7 @@ public class Quotation {
     @ManyToOne
     @Getter
     @Setter
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Product product;
 
     @Getter

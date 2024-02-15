@@ -7,7 +7,9 @@ import com.github.oguztecirlioglu.refurbedservice.domain.dto.ComputerDetailsDTO;
 import com.github.oguztecirlioglu.refurbedservice.domain.dto.PhoneDetailsDTO;
 import com.github.oguztecirlioglu.refurbedservice.domain.enums.ProductType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class QuotationService {
 
     @Autowired
@@ -33,10 +35,6 @@ public class QuotationService {
         Computer actualComputer = computerService.getComputerByAllFields(computerDetailsDTO);
         Float price = actualComputer.getPrice() * computerDetailsDTO.getCondition();
 
-        return new Quotation(price,
-                computerDetailsDTO.getProductType(),
-                actualComputer,
-                true,
-                false);
+        return new Quotation(price, computerDetailsDTO.getProductType(), actualComputer, true, false);
     }
 }

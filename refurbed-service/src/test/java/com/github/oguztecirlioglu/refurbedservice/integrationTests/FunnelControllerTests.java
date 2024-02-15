@@ -8,6 +8,7 @@ import com.github.oguztecirlioglu.refurbedservice.domain.dto.ProductTypeDTO;
 import com.github.oguztecirlioglu.refurbedservice.domain.enums.ProductType;
 import com.github.oguztecirlioglu.refurbedservice.domain.enums.computerEnums.ComputerManufacturer;
 import com.github.oguztecirlioglu.refurbedservice.service.FunnelService;
+import com.github.oguztecirlioglu.refurbedservice.service.QuotationService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,9 @@ public class FunnelControllerTests {
 
     @MockBean
     private FunnelService funnelService;
+
+    @MockBean
+    private QuotationService quotationService;
 
     @Test
     @WithMockUser
