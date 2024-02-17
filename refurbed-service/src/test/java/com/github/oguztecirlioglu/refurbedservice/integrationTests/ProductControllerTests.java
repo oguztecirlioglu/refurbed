@@ -76,7 +76,7 @@ public class ProductControllerTests {
         String description = "iPhone Description";
         URL url = new URL("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-card-40-iphone15prohero-202309_FMT_WHH?wid=508&hei=472&fmt=p-jpg&qlt=95&.v=1693086369818");
         PhoneManufacturer phoneManufacturer = PhoneManufacturer.APPLE;
-        Short memory = 256;
+        Integer memory = 256;
         String color = "blue";
 
         Phone samplePhone = new Phone(manufactureYear, price, name, phoneManufacturer, memory, color);
@@ -101,7 +101,7 @@ public class ProductControllerTests {
         URL url = new URL("https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/og-macbook-pro-202310?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1697039356093");
 
         ComputerManufacturer computerManufacturer = ComputerManufacturer.APPLE;
-        Short storage = 1024;
+        Integer storage = 1024;
         Float screenSize = 15.8F;
 
         Computer sampleComputer = new Computer(manufactureYear, price, name, computerManufacturer, storage, screenSize);

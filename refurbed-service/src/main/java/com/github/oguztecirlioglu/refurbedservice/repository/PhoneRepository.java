@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PhoneRepository extends JpaRepository<Phone, Long> {
     Phone findByPhoneManufacturerAndMemoryAndColorAndManufactureYear(PhoneManufacturer phoneManufacturer,
-                                                                     Short memory,
+                                                                     Integer memory,
                                                                      String color,
                                                                      String manufactureYear);
 }

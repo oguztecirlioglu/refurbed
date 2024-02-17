@@ -20,14 +20,14 @@ public class Phone extends Product {
     @Setter
     @Getter
     @NotNull
-    private Short memory;
+    private Integer memory;
 
     @Setter
     @Getter
     @NotNull
     private String color;
 
-    public Phone(String manufactureYear, Float price, String name, PhoneManufacturer phoneManufacturer, Short memory, String color) {
+    public Phone(String manufactureYear, Float price, String name, PhoneManufacturer phoneManufacturer, Integer memory, String color) {
         super(manufactureYear, price, name);
         this.phoneManufacturer = phoneManufacturer;
         this.memory = memory;

@@ -21,14 +21,14 @@ import java.net.URL;
     @Getter
     @Setter
     @NotNull
-    private Short storage;
+    private Integer storage;
 
     @Getter
     @Setter
     @NotNull
     private Float screenSize;
 
-   public Computer(String manufactureYear, Float price, String name, ComputerManufacturer computerManufacturer, Short storage, Float screenSize) {
+   public Computer(String manufactureYear, Float price, String name, ComputerManufacturer computerManufacturer, Integer storage, Float screenSize) {
       super(manufactureYear, price, name);
       this.computerManufacturer = computerManufacturer;
       this.storage = storage;
@@ -36,7 +36,7 @@ import java.net.URL;
    }
 
    public Computer(ComputerManufacturer computerManufacturer,
-                   Float screenSize, Short storage,
+                   Float screenSize, Integer storage,
                    String manufactureYear) {
                this.computerManufacturer = computerManufacturer;
                this.screenSize = screenSize;

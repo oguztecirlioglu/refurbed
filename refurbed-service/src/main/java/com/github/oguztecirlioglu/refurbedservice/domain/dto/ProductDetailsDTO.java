@@ -18,4 +18,10 @@ abstract public class ProductDetailsDTO {
     @Setter
     @Getter
     private String manufactureYear;
+
+    public ProductDetailsDTO(ProductType productType, Float condition, String manufactureYear) {
+        this.productType = productType;
+        this.condition = condition;
+        this.manufactureYear = manufactureYear;
+    }
 }

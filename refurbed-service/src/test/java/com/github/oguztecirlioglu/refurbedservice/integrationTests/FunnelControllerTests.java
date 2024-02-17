@@ -68,11 +68,11 @@ public class FunnelControllerTests {
         List<Product> mockComputers = Arrays.asList(
                 new Computer("2020", 1110F,
                         "MacBook", ComputerManufacturer.APPLE,
-                        (short) 1024, 15.9F),
+                        1024, 15.9F),
 
                 new Computer("2022", 1110F,
                         "Notebook", ComputerManufacturer.MICROSOFT,
-                        (short) 2048, 15.9F)
+                        2048, 15.9F)
         );
 
         Mockito.when(funnelService.getComputers()).thenReturn(mockComputers);
